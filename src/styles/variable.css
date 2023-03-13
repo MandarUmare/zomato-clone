@@ -8,4 +8,7 @@
     --inactive-color:#F8F8F8;
     --filter-text:#9c9c9c;
     --heading-text:#1C1C1C;
+    --collection-shadow:rgb(0 0 0/ 8%) 0px 3px 12px;
+    --primary-bg:rgb(255,255,255);
+    --collection-bg:#F8F8F8;
 } 

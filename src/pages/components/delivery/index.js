@@ -2,8 +2,7 @@ import React from 'react';
 import Filters from '../common/filter';
 import "./delivery.css";
 import Deliverycollections from './collections';
-
-
+import Topbrands from './collections/Deliveryitems/topbrand/Topbrands';
 
 
 const deliveryfilter=[
@@ -36,6 +35,8 @@ const deliveryfilter=[
 
 ]
 
+// const restaurantlist=restaurants;
+
 const Delivery = () => {
   return (
     <div>
@@ -44,6 +45,8 @@ const Delivery = () => {
         
       </Filters>
       <Deliverycollections></Deliverycollections>
+      <Topbrands/>
+      {/* <Explore list={restaurantlist}/> */}
     </div>
   )
 }

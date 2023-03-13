@@ -1,53 +1,102 @@
 import React from 'react';
 import "./collection.css";
 import Slider from "react-slick";
+import PrevArrow from '../../common/carousel/prevArrow';
+import NextArrow from '../../common/carousel/nextArrow';
+import Deliveryitems from './Deliveryitems';
 
 
-const deliveryitems=[
+const deliveryitems = [{
+  id: 1,
+  title: "Pizza",
+  cover: "https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png"
+},
+{
+  id: 2,
+  title: "Burger",
+  cover: "https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png"
+},
+{
+  id: 3,
+  title: "Sandwitch",
+  cover: "https://b.zmtcdn.com/data/o2_assets/fc641efbb73b10484257f295ef0b9b981634401116.png"
+},
+{
+  id: 4,
+  title: "Biryani",
+  cover: "https://b.zmtcdn.com/data/dish_images/d19a31d42d5913ff129cafd7cec772f81639737697.png"
+},
+{
+  id: 5,
+  title: "Chiken",
+  cover: "https://b.zmtcdn.com/data/dish_images/197987b7ebcd1ee08f8c25ea4e77e20f1634731334.png"
+},
+{
+  id: 6,
+  title: "Rolls",
+  cover: "https://b.zmtcdn.com/data/dish_images/c2f22c42f7ba90d81440a88449f4e5891634806087.png"
+},
+{
+  id: 7,
+  title: "Cake",
+  cover: "https://b.zmtcdn.com/data/dish_images/d5ab931c8c239271de45e1c159af94311634805744.png"
+},
+{
+  id: 8,
+  title: "Thali",
+  cover: "https://b.zmtcdn.com/data/o2_assets/52eb9796bb9bcf0eba64c643349e97211634401116.png"
+},
+{
+  id: 9,
+  title: "Mommos",
+  cover: "https://b.zmtcdn.com/data/dish_images/1437bc204cb5c892cb22d78b4347f4651634827140.png"
+},
+{
+  id: 10,
+  title: "Chaat",
+  cover: "https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png"
+}
 
-]
+];
 var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 2,
-    // nextArrow:dfd,
-    // prevArrow:dfd,
-  };
+  dots: true,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+};
 
 const Deliverycollections = () => {
   return (
     <div className='delivery-collection'>
-    <div className='max-width'>
-    <div className='collection-title'>
-    Inspiration for your first order
-    </div>
-  
-    <Slider {...settings}>
-      <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
-    </Slider>
-  
-
-    </div>
       
+      <div className='max-width'>
+        <div className='collection-title'>
+          Inspiration for your first order
+
+        </div>
+       
+        <Slider  {...settings}>
+       
+          {
+            deliveryitems.map((item) => {
+              return <Deliveryitems
+                id={item.id}
+                title={item.title}
+                cover={item.cover}
+              />
+            })
+          }
+        
+        </Slider>
+       
+
+
+        
+      </div>
+     
     </div>
   )
 }
