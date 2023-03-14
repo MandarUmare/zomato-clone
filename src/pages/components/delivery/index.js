@@ -3,6 +3,9 @@ import Filters from '../common/filter';
 import "./delivery.css";
 import Deliverycollections from './collections';
 import Topbrands from './collections/Deliveryitems/topbrand/Topbrands';
+import Exploresection from '../common/Exploresection';
+import { restaurants
+ } from '../data/restaurant';
 
 
 const deliveryfilter=[
@@ -16,6 +19,8 @@ const deliveryfilter=[
         name:"rating: 4.0+"
     },
     {
+
+
         id:3,
         name:"Safe and Hygenic "
     },
@@ -35,7 +40,7 @@ const deliveryfilter=[
 
 ]
 
-// const restaurantlist=restaurants;
+const restaurantlist=restaurants;
 
 const Delivery = () => {
   return (
@@ -46,7 +51,7 @@ const Delivery = () => {
       </Filters>
       <Deliverycollections></Deliverycollections>
       <Topbrands/>
-      {/* <Explore list={restaurantlist}/> */}
+      <Exploresection list={restaurantlist} collectionname={"Delivery Restaurants in Mumbai"}/>
     </div>
   )
 }
