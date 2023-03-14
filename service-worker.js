@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/zomato-clone/precache-manifest.b744bb0909cfc7c769d53e6c3aeb7247.js"
+  "/zomato-clone/precache-manifest.eea66a483fca27b66a5a2cea585c79ab.js"
 );
 
 workbox.clientsClaim();
