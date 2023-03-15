@@ -1,5 +1,26 @@
 import React from 'react';
 import "./ExploreCard.css";
+import $ from 'jquery';
+import '../../../../../../node_modules/animate.css';
+
+
+
+    
+
+$(document).ready(function(){
+  $(window).scroll(function(){
+  var positiontop = $(document).scrollTop();
+  console.log(positiontop);
+ if(positiontop>50){
+ $(".explore-card-image").addClass("animate__rotateOutDownRight");
+
+
+ 
+}else{
+    $(".explore-card-image").removeClass("animate__rotateOutDownRight");
+ }
+  });
+});
 
 const ExploreCard = ({ restaurant }) => {
     const name = restaurant.info.name;

@@ -9,14 +9,17 @@
     display: flex;
     align-items: center;
 }
-
+.animate__rotateOutDownRight{
+    transform: scale3d(1,1,1);
+    transition: 2s;
+}
 
 .delivery-item-image{
    object-fit: cover;
    height:100%;
    width:100%;
    border-radius:50%;
-   
+  
    
 }
 .delivery-item-title{
